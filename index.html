@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Crossy Word v.2.2 SNEP Build.loader.js";
+      var loaderUrl = buildUrl + "/CrossyWordStagingBuild2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Crossy Word v.2.2 SNEP Build.data.unityweb",
-        frameworkUrl: buildUrl + "/Crossy Word v.2.2 SNEP Build.framework.js.unityweb",
-        codeUrl: buildUrl + "/Crossy Word v.2.2 SNEP Build.wasm.unityweb",
+        dataUrl: buildUrl + "/CrossyWordStagingBuild2.data.unityweb",
+        frameworkUrl: buildUrl + "/CrossyWordStagingBuild2.framework.js.unityweb",
+        codeUrl: buildUrl + "/CrossyWordStagingBuild2.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Crossy Word",
@@ -80,6 +80,7 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
